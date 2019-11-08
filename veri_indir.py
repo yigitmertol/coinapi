@@ -27,7 +27,7 @@ headers = {'X-CoinAPI-Key' : api_key}
 data_dir = '../../../Data/Coins/BTC_USD/Trade_Data/'
 
 df_saved = pd.read_csv( data_dir + 'BITSTAMP_TRADE_SPOTBTC_last_saved_trade.csv' , index_col='uuid')
-df_original = pd.read_csv( data_dir + 'BITSTAMP_TRADE_SPOTBTC_cum_.csv', nrows=1 , index_col='uuid')
+df_original = pd.read_csv( data_dir + 'BITSTAMP_TRADE_SPOTBTC_cum.csv', nrows=1 , index_col='uuid')
 
 # Manual day addition until above code fixed
 
