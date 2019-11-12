@@ -59,6 +59,7 @@ else:
 
 if limit:
     df_new = make_all_time_indexes(df_new )
+    df_new = df_new[df_original.columns.values]
     # print(df_saved['time_exchange'].unique().max())
     # print(df_new['time_exchange'].unique().min())
     # print(df_new['time_exchange'].unique().max())
@@ -66,7 +67,7 @@ if limit:
     df_new.tail(1).to_csv(data_dir + 'BITSTAMP_TRADE_SPOTBTC_last_saved_trade.csv')
 
 
-    with open(data_dir + 'BITSTAMP_TRADE_SPOTBTC_cum_.csv', 'a') as fd:
+    with open(data_dir + 'BITSTAMP_TRADE_SPOTBTC_cum.csv', 'a') as fd:
         df_new.to_csv(fd, header=False)
 
     
